@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Plaster&display=swap');
+
+.menu {
+    border-radius: 0px !important;
+    background-color: rgb(4, 3, 6) !important;
+}
+
+.item {
+    color: white !important;
+}
+
+.main_heading {
+    font-family: 'Plaster', cursive;
+
+}
+
+#reddit:hover {
+    color: #ff4500;
+    transition-duration: 500ms;
+}
+#reddit {
+    transition-duration: 500ms;
+}
+
+#hackernews:hover {
+    color: #ff6600;
+    transition-duration: 500ms;
+}
+#hackernews {
+    transition-duration: 500ms;
+}
+
+#producthunt:hover {
+    color: #da552f;
+    transition-duration: 500ms;
+}
+#producthunt {
+    transition-duration: 500ms;
+}
+
+#youtube:hover {
+    color: #ff0000;
+    transition-duration: 500ms;
+}
+#youtube {
+    transition-duration: 500ms;
+}
+
+#twitter:hover {
+    color: #1DA1F2;
+    transition-duration: 500ms;
+}
+#twitter {
+    transition-duration: 500ms;
+}
