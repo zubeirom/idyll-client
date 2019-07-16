@@ -6,7 +6,6 @@ export default Route.extend({
 
     async model() {
         const res = await this.get('ajax').request('https://api.hnpwa.com/v0/news/1.json');
-        console.log(res);
         return res;
     }
 });
