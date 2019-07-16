@@ -8,6 +8,13 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('reddit');
+  this.route('hacker-news');
+  this.route('product-hunt');
+  this.route('news');
+  this.route('youtube');
+  this.route('medium');
+  this.route('twitter');
+  this.route('github');
 });
 
 export default Router;
