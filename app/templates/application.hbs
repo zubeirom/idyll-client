@@ -45,14 +45,13 @@
           </a>
         </div>
       </div>
-      <div class="fiveteen wide column">
+      <div class="fifteen wide column">
         {{outlet}}
       </div>
     </div>
   </div>
 {{/if}}
 {{#if (media 'isTablet')}}
-  {{outlet}}
   <div class="ui labeled icon menu">
     <div class="item">
       <h1 class="main_heading">
@@ -88,6 +87,7 @@
       Zubeirtech
     </a>
   </div>
+    {{outlet}}
 {{/if}}
 {{#if (media 'isMobile')}}
   
@@ -156,4 +156,3 @@
   {{/if}}
   {{outlet}}
 {{/if}}
-{{outlet}}

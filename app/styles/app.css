@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Plaster&display=swap');
 
+.ui {
+    border-radius: 0px !important; 
+}
+
 .menu {
     border-radius: 0px !important;
     background-color: rgb(4, 3, 6) !important;
