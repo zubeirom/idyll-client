@@ -2,5 +2,11 @@ import Controller from '@ember/controller';
 import { inject as service } from '@ember/service';
 
 export default Controller.extend({
-    media: service()
+    media: service(),
+
+    actions: {
+        menu() {
+            this.toggleProperty('menuToggle');
+        }
+    }
 });
