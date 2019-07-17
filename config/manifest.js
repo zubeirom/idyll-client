@@ -14,7 +14,7 @@ module.exports = function(/* environment, appConfig */) {
     theme_color: "#fff",
     icons: [
       {
-        src: "https://i.imgur.com/d05hA6f.png",
+        src: "https://i.imgur.com/eNgyowS.png",
         sizes: "540x540",
         type: "image/png"
       }
