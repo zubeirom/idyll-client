@@ -15,6 +15,7 @@
 
 .main_heading {
   font-family: "Plaster", cursive;
+  font-size: 20px;
 }
 
 #reddit:hover {
@@ -62,4 +63,20 @@
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 900px;
+}
+
+#github:hover {
+  color: #6e5494;
+  transition-duration: 500ms;
+}
+#github {
+  transition-duration: 500ms;
+}
+
+#newspaper:hover {
+  color: lightgrey;
+  transition-duration: 500ms;
+}
+#newspaper {
+  transition-duration: 500ms;
 }
