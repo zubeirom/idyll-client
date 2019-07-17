@@ -15,13 +15,15 @@
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "start": "ember serve",
-    "test": "ember test"
+    "test": "ember test",
+    "proxy": "ember server --proxy http://localhost:3000"
   },
   "devDependencies": {
     "@ember/jquery": "^0.5.2",
     "@ember/optional-features": "^0.6.3",
     "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^5.0.0",
+    "ember-auto-import": "^1.5.2",
     "ember-cli": "~3.8.3",
     "ember-cli-app-version": "^3.2.0",
     "ember-cli-babel": "^7.1.2",
@@ -38,6 +40,7 @@
     "ember-load-initializers": "^1.1.0",
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-qunit": "^3.4.1",
+    "ember-require-module": "^0.3.0",
     "ember-resolver": "^5.0.1",
     "ember-responsive": "^3.0.4",
     "ember-scrollable": "^0.5.2",
@@ -50,5 +53,9 @@
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "newsapi": "^2.4.0"
   }
 }

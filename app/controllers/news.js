@@ -12,6 +12,11 @@ export default Controller.extend({
         viewSrcs() {
             set(this, 'viewArticles', false);
             set(this, 'viewSources', true);
+        },
+        activateArticles() {
+            console.log(this.model)
+            set(this, 'viewArticles', true);
+            set(this, 'viewSources', false);
         }
     }
 });

@@ -9,7 +9,7 @@
 	<div class="ui grid">
 		<div class="three column row">
 			<div class="column">
-				<button class="ui fluid  inverted animated fade green button" {{action (mut viewArticles) true}}>
+				<button class="ui fluid  inverted animated fade green button" {{action "activateArticles"}}>
 					<div class="visible content">Top Articles</div>
 					<div class="hidden content"><i class="angle double up icon"></i></div>
 				</button>
@@ -33,7 +33,33 @@
 	<br>
 	<br>
 	{{#if viewArticles}}
-	  
+		<div style="height: 800px;" class="wow fadeInUp" data-wow-duration="0.5s">
+			{{#ember-scrollable autoHide=false}}
+			  <div class="ui divided items">
+					{{#each model.articles as |article|}}
+					  <div class="item">
+					  	<div class="image">
+					  		<img src={{article.urlToImage}} alt="">
+					  	</div>
+					  	<div class="content">
+					  		<div class="header">{{article.title}}</div>
+					  		<div class="meta">
+					  			<span class="cinema">{{article.source.name}}</span>
+					  		</div>
+					  		<div class="description">
+					  			{{article.description}}
+					  		</div>
+								<div class="extra">
+									<a href={{article.url}} target="_blank">
+										<div class="ui teal tag label">Go to Article</div>
+									</a>
+								</div>
+					  	</div>
+					  </div>
+					{{/each}}
+				</div>
+			{{/ember-scrollable}}
+		</div>
 	{{else}}
 	  {{#if viewSources}}
 				<div style="height: 500px;" class="wow fadeInRight" data-wow-delay="0.5s">
