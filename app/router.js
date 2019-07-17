@@ -15,6 +15,7 @@ Router.map(function() {
   this.route('medium');
   this.route('twitter');
   this.route('github');
+  this.route('google');
 });
 
 export default Router;

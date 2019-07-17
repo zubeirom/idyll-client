@@ -80,3 +80,11 @@
 #newspaper {
   transition-duration: 500ms;
 }
+
+#google:hover {
+  color: #0F9D58;
+  transition-duration: 500ms;
+}
+#google {
+  transition-duration: 500ms;
+}
