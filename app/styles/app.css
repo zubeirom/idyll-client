@@ -1,59 +1,65 @@
-@import url('https://fonts.googleapis.com/css?family=Plaster&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Plaster&display=swap");
 
 .ui {
-    border-radius: 0px !important; 
+  border-radius: 0px !important;
 }
 
 .menu {
-    border-radius: 0px !important;
-    background-color: rgb(4, 3, 6) !important;
+  border-radius: 0px !important;
+  background-color: rgb(4, 3, 6) !important;
 }
 
 .item {
-    color: white !important;
+  color: white !important;
 }
 
 .main_heading {
-    font-family: 'Plaster', cursive;
-
+  font-family: "Plaster", cursive;
 }
 
 #reddit:hover {
-    color: #ff4500;
-    transition-duration: 500ms;
+  color: #ff4500;
+  transition-duration: 500ms;
 }
 #reddit {
-    transition-duration: 500ms;
+  transition-duration: 500ms;
 }
 
 #hackernews:hover {
-    color: #ff6600;
-    transition-duration: 500ms;
+  color: #ff6600;
+  transition-duration: 500ms;
 }
 #hackernews {
-    transition-duration: 500ms;
+  transition-duration: 500ms;
 }
 
 #producthunt:hover {
-    color: #da552f;
-    transition-duration: 500ms;
+  color: #da552f;
+  transition-duration: 500ms;
 }
 #producthunt {
-    transition-duration: 500ms;
+  transition-duration: 500ms;
 }
 
 #youtube:hover {
-    color: #ff0000;
-    transition-duration: 500ms;
+  color: #ff0000;
+  transition-duration: 500ms;
 }
 #youtube {
-    transition-duration: 500ms;
+  transition-duration: 500ms;
 }
 
 #twitter:hover {
-    color: #1DA1F2;
-    transition-duration: 500ms;
+  color: #1da1f2;
+  transition-duration: 500ms;
 }
 #twitter {
-    transition-duration: 500ms;
+  transition-duration: 500ms;
+}
+
+#youtube_description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 900px;
 }

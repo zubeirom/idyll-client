@@ -16,7 +16,6 @@ export default Route.extend({
             newsapi.v2.topHeadlines({
                 language: 'en',
             }).then(response => {
-                console.log(response.articles)
                 const { articles } = response;
                 set(model, 'articles', articles);
                 set(model, 'categories', ['business', 'entertainment', 'health', 'science', 'sports', 'technology'])

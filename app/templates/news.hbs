@@ -7,15 +7,15 @@
 	<br>
 	<br>
 	<br>
-	<div class="ui grid">
-		<div class="four column row">
-			<div class="column">
+	<div class="ui form">
+		<div class="ui fields">
+			<div class="field">
 				<button class="ui fluid  inverted animated fade green button" {{action "activateArticles"}}>
 					<div class="visible content">Top Articles</div>
 					<div class="hidden content"><i class="angle double up icon"></i></div>
 				</button>
 			</div>
-			<div class="column">
+			<div class="field">
 				<button class="ui fluid inverted animated fade red button" {{action "viewSrcs"}}>
 					<div class="visible content">Sources</div>
 					<div class="hidden content">
@@ -23,13 +23,13 @@
 					</div>
 				</button>
 			</div>
-			<div class="column">
+			<div class="field">
 				<button class="ui fluid inverted animated fade primary button" {{action "viewCountries"}}>
 					<div class="visible content">Countries</div>
 					<div class="hidden content"><i class="language icon"></i></div>
 				</button>
 			</div>
-			<div class="column">
+			<div class="field">
 				{{#ui-dropdown class="selection" selected="Bob" onChange=(action (mut gender))}}
 				  <div class="default text">Categories</div>
 				  <i class="dropdown icon"></i>

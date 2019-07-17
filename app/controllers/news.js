@@ -21,7 +21,6 @@ export default Controller.extend({
                 newsapi.v2.topHeadlines({
                     language: 'en',
                 }).then(response => {
-                    console.log(response.articles)
                     const { articles } = response;
                     set(this.model, 'articles', articles);
                     set(this, 'loader', false)
@@ -41,7 +40,6 @@ export default Controller.extend({
                 newsapi.v2.topHeadlines({
                     sources
                 }).then(response => {
-                    console.log(response.articles)
                     const { articles } = response;
                     set(this.model, 'articles', articles);
                     set(this, 'viewArticles', true);
@@ -60,7 +58,6 @@ export default Controller.extend({
                 newsapi.v2.topHeadlines({
                     country
                 }).then(response => {
-                    console.log(response.articles)
                     const { articles } = response;
                     set(this.model, 'articles', articles);
                     set(this, 'viewArticles', true);
@@ -83,7 +80,6 @@ export default Controller.extend({
                     country: 'us',
                     category,
                 }).then(response => {
-                    console.log(response.articles)
                     const { articles } = response;
                     set(this.model, 'articles', articles);
                     set(this, 'viewArticles', true);
