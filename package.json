@@ -45,11 +45,13 @@
     "ember-responsive": "^3.0.4",
     "ember-scrollable": "^0.5.2",
     "ember-source": "~3.8.0",
+    "ember-toastr": "^1.7.2",
     "ember-welcome-page": "^3.2.0",
     "eslint-plugin-ember": "^5.2.0",
     "loader.js": "^4.7.0",
     "qunit-dom": "^0.8.0",
-    "semantic-ui-ember": "^3.0.3"
+    "semantic-ui-ember": "^3.0.3",
+    "toastr": "^2.1.4"
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
