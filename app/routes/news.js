@@ -19,6 +19,7 @@ export default Route.extend({
                 console.log(response.articles)
                 const { articles } = response;
                 set(model, 'articles', articles);
+                set(model, 'categories', ['business', 'entertainment', 'health', 'science', 'sports', 'technology'])
             });
         } catch (error) {
             console.log(error);
