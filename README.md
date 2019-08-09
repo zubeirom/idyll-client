@@ -1,4 +1,4 @@
-The server Repo is at https://github.com/zubeir68/idyll-client
+The server Repo is at https://github.com/zubeir68/idyll-server
 
 # client
 
