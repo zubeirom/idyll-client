@@ -1,3 +1,5 @@
+The server Repo is at https://github.com/zubeir68/idyll-client
+
 # client
 
 This README outlines the details of collaborating on this Ember application.
