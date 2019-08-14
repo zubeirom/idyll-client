@@ -17,7 +17,6 @@ export default Route.extend({
                 sources: 'reddit-r-all',
             }).then(response => {
                 const { articles } = response;
-                console.log(articles)
                 set(model, 'articles', articles);
                 set(model, 'categories', ['business', 'entertainment', 'health', 'science', 'sports', 'technology'])
             });
