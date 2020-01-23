@@ -1,3 +1,4 @@
+{{!-- template-lint-disable  --}}
 <br>
 <div class="ui basic segment">
 	<img src="https://newsapi.org/images/n-logo-border.png" class="ui tiny image" alt="">
@@ -80,6 +81,7 @@
 			</div>
 			{{else}}
 			{{#if viewSources}}
+			<strong>Press on any Source !</strong>
 			<div style="height: 500px;" class="wow fadeInRight" data-wow-delay="0.5s">
 				{{#ember-scrollable autoHide=false}}
 				<div class="ui grid">
@@ -209,6 +211,7 @@
 				{{/ember-scrollable}}
 			</div>
 			{{else}}
+			<strong>Press on any Country!</strong>
 			<div style="height: 500px;" class="wow fadeInLeft" data-wow-delay="0.5s">
 				{{#ember-scrollable autoHide=false}}
 				<div class="ui grid">
