@@ -1,4 +1,4 @@
-{{#if (media 'isDesktop')}}
+{{#if (media "isDesktop")}}
   <div class="ui container">
     <div class="ui grid">
       <div class="one wide column">
@@ -12,33 +12,33 @@
           <br>
           <br>
           {{#link-to "reddit" class="item"}}
-          <i class="fab fa-reddit fa-2x" id="reddit"></i>
+            <i class="fab fa-reddit fa-2x" id="reddit"></i>
           {{/link-to}}
           {{#link-to "hacker-news" class="item"}}
-          <i class="fab fa-hacker-news-square fa-2x" id="hackernews"></i>
+            <i class="fab fa-hacker-news-square fa-2x" id="hackernews"></i>
           {{/link-to}}
           {{#link-to "product-hunt" class="item"}}
-          <i class="fab fa-product-hunt fa-2x" id="producthunt"></i>
+            <i class="fab fa-product-hunt fa-2x" id="producthunt"></i>
           {{/link-to}}
           {{#link-to "news" class="item"}}
-          <i class="far fa-newspaper fa-2x" id="newspaper"></i>
+            <i class="far fa-newspaper fa-2x" id="newspaper"></i>
           {{/link-to}}
           {{#link-to "youtube" class="item"}}
-          <i class="fab fa-youtube fa-2x" id="youtube"></i>
+            <i class="fab fa-youtube fa-2x" id="youtube"></i>
           {{/link-to}}
           {{#link-to "google" class="item"}}
-          <i class="fab fa-google fa-2x" id="google"></i>
+            <i class="fab fa-google fa-2x" id="google"></i>
           {{/link-to}}
           {{#link-to "github" class="item"}}
-          <i class="fab fa-github fa-2x"  id="github"></i>
+            <i class="fab fa-github fa-2x"  id="github"></i>
           {{/link-to}}
           <br>
           <br>
           <br>
           <br>
-          <a class="item" href="https://zubeirtech.herokuapp.com" target="_blank">
+          <a class="item" href="https://zubeirtech.firebaseapp.com" target="_blank" rel="noopener">
             <i class="copyright icon"></i>
-            Zubeirtech
+            ZubeirTech
           </a>
         </div>
       </div>
@@ -48,7 +48,7 @@
     </div>
   </div>
 {{/if}}
-{{#if (media 'isTablet')}}
+{{#if (media "isTablet")}}
   <div class="ui labeled icon menu">
     <div class="item">
       <h1 class="main_heading">
@@ -56,93 +56,93 @@
       </h1>
     </div>
     {{#link-to "reddit" class="item"}}
-    <i class="fab fa-reddit fa-2x" id="reddit"></i>
+      <i class="fab fa-reddit fa-2x" id="reddit"></i>
     {{/link-to}}
     {{#link-to "hacker-news" class="item"}}
-    <i class="fab fa-hacker-news-square fa-2x" id="hackernews"></i>
+      <i class="fab fa-hacker-news-square fa-2x" id="hackernews"></i>
     {{/link-to}}
     {{#link-to "product-hunt" class="item"}}
-    <i class="fab fa-product-hunt fa-2x" id="producthunt"></i>
+      <i class="fab fa-product-hunt fa-2x" id="producthunt"></i>
     {{/link-to}}
     {{#link-to "news" class="item"}}
-    <i class="far fa-newspaper fa-2x"></i>
+      <i class="far fa-newspaper fa-2x"></i>
     {{/link-to}}
     {{#link-to "youtube" class="item"}}
-    <i class="fab fa-youtube fa-2x" id="youtube"></i>
+      <i class="fab fa-youtube fa-2x" id="youtube"></i>
     {{/link-to}}
     {{#link-to "google" class="item"}}
-    <i class="fab fa-google fa-2x" id="google"></i>
+      <i class="fab fa-google fa-2x" id="google"></i>
     {{/link-to}}
     {{#link-to "github" class="item"}}
-    <i class="fab fa-github fa-2x"></i>
+      <i class="fab fa-github fa-2x"></i>
     {{/link-to}}
-    <a class="item" href="https://zubeirtech.herokuapp.com" target="_blank">
+    <a class="item" href="https://zubeirtech.firebaseapp.com" target="_blank" rel="noopener" >
       <i class="copyright icon"></i>
-      Zubeirtech
+      ZubeirTech
     </a>
   </div>
-    {{outlet}}
+  {{outlet}}
 {{/if}}
-{{#if (media 'isMobile')}}
+{{#if (media "isMobile")}}
   
   {{#if this.menuToggle}}
-  <div class="ui stackable menu wow fadeInDown" data-wow-duration="0.5s">
-    <div class="item">
-      <h1 class="main_heading">
-        Idyll
-      </h1>
-    </div>
-    <div class="right menu">
+    <div class="ui stackable menu wow fadeInDown" data-wow-duration="0.5s">
       <div class="item">
-        <i class="fas fa-times fa-2x" {{action "menu"}}></i>
+        <h1 class="main_heading">
+          Idyll
+        </h1>
       </div>
+      <div class="right menu" role="button" {{action "menu"}}>
+        <div class="item">
+          <i class="fas fa-times fa-2x" ></i>
+        </div>
+      </div>
+      {{#link-to "reddit" class="item"}}
+        <i class="fab fa-reddit fa-2x" id="reddit"></i>&nbsp;&nbsp;
+        Reddit
+      {{/link-to}}
+      {{#link-to "hacker-news" class="item"}}
+        <i class="fab fa-hacker-news-square fa-2x" id="hackernews"></i>&nbsp;&nbsp;
+       Hacker News
+      {{/link-to}}
+      {{#link-to "product-hunt" class="item"}}
+        <i class="fab fa-product-hunt fa-2x" id="producthunt"></i> &nbsp;&nbsp;
+       Product Hunt
+      {{/link-to}}
+      {{#link-to "news" class="item"}}
+        <i class="far fa-newspaper fa-2x"></i>&nbsp;&nbsp;
+        News
+      {{/link-to}}
+      {{#link-to "youtube" class="item"}}
+        <i class="fab fa-youtube fa-2x" id="youtube"></i>&nbsp;&nbsp;
+        Youtube Trending
+      {{/link-to}}
+      {{#link-to "google" class="item"}}
+        <i class="fab fa-google fa-2x" id="google"></i>&nbsp;&nbsp;
+      Google Trends
+      {{/link-to}}
+      {{#link-to "github" class="item"}}
+        <i class="fab fa-github fa-2x"></i>&nbsp;&nbsp;
+        Github Trending
+      {{/link-to}}
+      <a class="item" href="https://zubeirtech.firebaseapp.com" target="_blank" rel="noopener">
+        <i class="copyright icon"></i>&nbsp;&nbsp;
+        ZubeirTech
+      </a>
     </div>
-    {{#link-to "reddit" class="item"}}
-      <i class="fab fa-reddit fa-2x" id="reddit"></i>&nbsp;&nbsp;
-      Reddit
-    {{/link-to}}
-    {{#link-to "hacker-news" class="item"}}
-     <i class="fab fa-hacker-news-square fa-2x" id="hackernews"></i>&nbsp;&nbsp;
-     Hacker News
-    {{/link-to}}
-    {{#link-to "product-hunt" class="item"}}
-     <i class="fab fa-product-hunt fa-2x" id="producthunt"></i> &nbsp;&nbsp;
-     Product Hunt
-    {{/link-to}}
-    {{#link-to "news" class="item"}}
-      <i class="far fa-newspaper fa-2x"></i>&nbsp;&nbsp;
-      News
-    {{/link-to}}
-    {{#link-to "youtube" class="item"}}
-      <i class="fab fa-youtube fa-2x" id="youtube"></i>&nbsp;&nbsp;
-      Youtube Trending
-    {{/link-to}}
-    {{#link-to "google" class="item"}}
-    <i class="fab fa-google fa-2x" id="google"></i>&nbsp;&nbsp;
-    Google Trends
-    {{/link-to}}
-    {{#link-to "github" class="item"}}
-      <i class="fab fa-github fa-2x"></i>&nbsp;&nbsp;
-      Github Trending
-    {{/link-to}}
-    <a class="item" href="https://zubeirtech.herokuapp.com" target="_blank">
-      <i class="copyright icon"></i>&nbsp;&nbsp;
-      Zubeirtech
-    </a>
-  </div>
   {{else}}
-  <div class="ui  labeled icon menu wow fadeIn" data-wow-duration="0.5s">
-    <div class="item">
-      <h1 class="main_heading">
-        Idyll
-      </h1>
-    </div>
-    <div class="right menu">
+    <div class="ui  labeled icon menu wow fadeIn" data-wow-duration="0.5s">
       <div class="item">
-        <i class="list ul icon" {{action "menu"}}></i>
+        <h1 class="main_heading">
+          Idyll
+        </h1>
+      </div>
+      <div class="right menu" role="button" {{action "menu"}}>
+        <div class="item">
+          <i class="list ul icon"></i>
+        </div>
       </div>
     </div>
-  </div>
   {{/if}}
   {{outlet}}
 {{/if}}
