@@ -50,6 +50,16 @@
   </head>
   <body>
     {{content-for "body"}}
+    <div class="ember-load-indicator">
+      <div id="loader-background" class="ui active center inline dimmer">
+        <div class="spinner">
+          <div class="dot1"></div>
+          <div class="dot2"></div>
+        </div>
+        <h1 class="ui white header" id="header" style="color: white; font-family: Plaster, cursive">Idyll
+        </h1>
+      </div>
+    </div>
 
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/client.js"></script>
