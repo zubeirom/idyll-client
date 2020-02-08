@@ -16,7 +16,8 @@
     "lint:js": "eslint .",
     "start": "ember serve",
     "test": "ember test",
-    "proxy": "ember server --proxy http://localhost:3000"
+    "proxy": "ember server --proxy http://localhost:3000",
+    "deploy": "rm -rd ./dist ./.firebase && ember build --environment=production && firebase deploy"
   },
   "devDependencies": {
     "@ember/jquery": "^0.5.2",
