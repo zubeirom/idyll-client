@@ -1,87 +1,96 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121955139-6"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'UA-121955139-6');
-    </script>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Idyll - Read from the best sources</title>
-    <meta name="title" content="Idyll - Read from the best sources">
-    <meta name="description" content="Read from news, reddit and many more trending sources from one place to always stay updated. Call it your Idyll or place of procrastination :D ">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://myidyll.firebaseapp.com/">
-    <meta property="og:title" content="Idyll - Read from the best sources">
-    <meta property="og:description" content="Read from news, reddit and many more trending sources from one place to always stay updated. Call it your Idyll or place of procrastination :D ">
-    <meta property="og:image" content="https://i.imgur.com/oUksfMa.png">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://myidyll.firebaseapp.com/">
-    <meta property="twitter:title" content="Idyll - Read from the best sources">
-    <meta property="twitter:description" content="Read from news, reddit and many more trending sources from one place to always stay updated. Call it your Idyll or place of procrastination :D ">
-    <meta property="twitter:image" content="https://i.imgur.com/oUksfMa.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121955139-6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-    {{content-for "head"}}
+    gtag('config', 'UA-121955139-6');
+  </script>
 
-    <link rel="manifest" href="{{rootURL}}manifest.webmanifest">
-    <meta name="msapplication-config" content="{{rootURL}}browserconfig.xml">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Idyll - Read from the best sources</title>
+  <meta name="title" content="Idyll - Read from the best sources">
+  <meta name="description"
+    content="Read from news, reddit and many more trending sources from one place to always stay updated. Call it your Idyll or place of procrastination :D ">
 
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/client.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://myidyll.firebaseapp.com/">
+  <meta property="og:title" content="Idyll - Read from the best sources">
+  <meta property="og:description"
+    content="Read from news, reddit and many more trending sources from one place to always stay updated. Call it your Idyll or place of procrastination :D ">
+  <meta property="og:image" content="https://i.imgur.com/oUksfMa.png">
 
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link integrity="" rel="text/html" href="{{rootURL}}assets/frontend.css">
-    <link rel="apple-touch-icon" sizes="57x57" href="https://i.imgur.com/eNgyowS.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="https://i.imgur.com/eNgyowS.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="https://i.imgur.com/eNgyowS.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="https://i.imgur.com/eNgyowS.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="https://i.imgur.com/eNgyowS.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="https://i.imgur.com/eNgyowS.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="https://i.imgur.com/eNgyowS.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="https://i.imgur.com/eNgyowS.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://i.imgur.com/eNgyowS.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="https://i.imgur.com/eNgyowS.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://i.imgur.com/eNgyowS.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="https://i.imgur.com/eNgyowS.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://i.imgur.com/eNgyowS.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="https://i.imgur.com/eNgyowS.png">
-    <meta name="theme-color" content="#ffffff">
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://myidyll.firebaseapp.com/">
+  <meta property="twitter:title" content="Idyll - Read from the best sources">
+  <meta property="twitter:description"
+    content="Read from news, reddit and many more trending sources from one place to always stay updated. Call it your Idyll or place of procrastination :D ">
+  <meta property="twitter:image" content="https://i.imgur.com/oUksfMa.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{content-for "head-footer"}}
-  </head>
-  <body>
-    {{content-for "body"}}
-    <div class="ember-load-indicator">
-      <div id="loader-background" class="ui active center inline dimmer">
-        <div class="spinner">
-          <div class="dot1"></div>
-          <div class="dot2"></div>
-        </div>
-        <h1 class="ui white header" id="header" style="color: white; font-family: Plaster, cursive">Idyll
-        </h1>
+  {{content-for "head"}}
+
+  <link rel="manifest" href="{{rootURL}}manifest.webmanifest">
+  <meta name="msapplication-config" content="{{rootURL}}browserconfig.xml">
+
+  <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+  <link integrity="" rel="stylesheet" href="{{rootURL}}assets/client.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+  <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+  <link integrity="" rel="text/html" href="{{rootURL}}assets/frontend.css">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://i.imgur.com/eNgyowS.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://i.imgur.com/eNgyowS.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://i.imgur.com/eNgyowS.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://i.imgur.com/eNgyowS.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://i.imgur.com/eNgyowS.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://i.imgur.com/eNgyowS.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://i.imgur.com/eNgyowS.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://i.imgur.com/eNgyowS.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://i.imgur.com/eNgyowS.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://i.imgur.com/eNgyowS.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://i.imgur.com/eNgyowS.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://i.imgur.com/eNgyowS.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://i.imgur.com/eNgyowS.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="https://i.imgur.com/eNgyowS.png">
+  <meta name="theme-color" content="#ffffff">
+
+  {{content-for "head-footer"}}
+</head>
+
+<body>
+  {{content-for "body"}}
+  <div class="ember-load-indicator">
+    <div id="loader-background" class="ui active center inline dimmer">
+      <div class="spinner">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
       </div>
+      <h1 class="ui white header" id="header" style="color: white; font-family: Plaster, cursive">Idyll
+      </h1>
     </div>
+  </div>
 
-    <script src="{{rootURL}}assets/vendor.js"></script>
-    <script src="{{rootURL}}assets/client.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js" integrity="sha256-GMd3rFxMDNnM5JQEpiKLLl8kSrDuG5egqchk758z59g=" crossorigin="anonymous"></script>
-    <script>new WOW().init();</script>
 
-    {{content-for "body-footer"}}
-  </body>
+
+  <script src="{{rootURL}}assets/vendor.js"></script>
+  <script src="{{rootURL}}assets/client.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"
+    integrity="sha256-GMd3rFxMDNnM5JQEpiKLLl8kSrDuG5egqchk758z59g=" crossorigin="anonymous"></script>
+  <script>new WOW().init();</script>
+
+  {{content-for "body-footer"}}
+</body>
+
 </html>
