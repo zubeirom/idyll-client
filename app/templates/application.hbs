@@ -57,6 +57,27 @@
 </style>
 
 <script>
+
+  let sidebar = document.getElementById('body');
+
+  let mc = new Hammer(sidebar);
+
+  //enable all directions
+  mc.get('swipe').set({
+    direction: Hammer.DIRECTION_ALL,
+    threshold: 1, 
+    velocity:0.1
+  });
+
+  mc.on("swiperight", 
+    function toggleSidebar(ev) {
+      console.log(ev.type)
+      $('.ui.labeled.icon.sidebar')
+        .sidebar('toggle')
+        ;
+    }
+  )
+
   function toggleSidebar() {
     $('.ui.labeled.icon.sidebar')
       .sidebar('toggle')
@@ -114,7 +135,7 @@
   </div>
 </div>
 
-<div class="ui tablet mobile only padded grid">
+<div class="ui tablet mobile only padded grid" id="body">
   <div class="ui inverted borderless massive top fixed fluid menu" id="menu">
     <div class="item">
       <button
@@ -132,7 +153,7 @@
       </div>
     </div>
   </div>
-  <div class="ui left demo vertical inverted sidebar labeled icon menu">
+  <div class="ui left demo vertical inverted sidebar labeled icon menu" id="sidebar">
     <a class="item" href="/reddit">
       <i class="fab fa-reddit fa-2x" id="reddit"></i>
     </a>
@@ -169,4 +190,3 @@
   </div>
 </div>
 {{ember-load-remover}}
-<ServiceWorkerUpdateNotify />
