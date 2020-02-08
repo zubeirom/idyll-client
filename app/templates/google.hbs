@@ -1,56 +1,75 @@
-<br>
-<br>
+{{! template-lint-disable no-inline-styles  }}
+<br >
+<br >
 <div class="ui basic segment wow fadeIn" data-wow-duration="0.5s">
-    <img src="https://marketing.recogate.com/website/var/tmp/image-thumbnails/0/5064/thumb__assetLogo/Logo%20Google%20Trends.png" width="400px" alt="">
-    <br>
-    <h1 class="ui header">Latest Trends</h1>
-    <br>
-    <div style="height: 800px;">
-        {{#ember-scrollable autoHide=false}}
-        <div class="ui divided items">
-            {{#each model.firstTrending.trendingSearches as |trend|}}
-            <div class="item">
-                <div class="ui tiny image">
-                    <img src={{trend.image.imageUrl}} alt="">
-                </div>
-                <div class="content">
-                    <div class="header">{{trend.title.query}}</div>
-                    <div class="meta">
-                        <span class="cinema">{{trend.formattedTraffic}} Results</span>
-                    </div>
-                    <div class="description">
-                        {{article.description}}
-                    </div>
-                    <div class="extra">
-                        <a href={{trend.shareUrl}} target="_blank">
-                            <div class="ui green tag label">Go to Trend</div>
-                        </a>
-                    </div>
-                </div>
+  <img
+    src="https://marketing.recogate.com/website/var/tmp/image-thumbnails/0/5064/thumb__assetLogo/Logo%20Google%20Trends.png"
+    width="400px"
+    alt=""
+  >
+  <br >
+  <h1 class="ui header">
+    Latest Trends
+  </h1>
+  <br >
+  <div style="height: 800px;">
+    {{#ember-scrollable autoHide=false}}
+      <div class="ui divided items">
+        {{#each model.firstTrending.trendingSearches as |trend|}}
+          <div class="item">
+            <div class="ui tiny image">
+              <img src={{trend.image.imageUrl}} alt="" >
             </div>
-            {{/each}}
-            {{#each model.secondTrending.trendingSearches as |trend|}}
-            <div class="item">
-                <div class="ui tiny image">
-                    <img src={{trend.image.imageUrl}} alt="">
-                </div>
-                <div class="content">
-                    <div class="header">{{trend.title.query}}</div>
-                    <div class="meta">
-                        <span class="cinema">{{trend.formattedTraffic}}</span>
-                    </div>
-                    <div class="description">
-                        {{article.description}}
-                    </div>
-                    <div class="extra">
-                        <a href={{trend.shareUrl}} target="_blank">
-                            <div class="ui green tag label">Go to Article</div>
-                        </a>
-                    </div>
-                </div>
+            <div class="content">
+              <div class="header">
+                {{trend.title.query}}
+              </div>
+              <div class="meta">
+                <span class="cinema">
+                  {{trend.formattedTraffic}} Results
+                </span>
+              </div>
+              <div class="description">
+                {{article.description}}
+              </div>
+              <div class="extra">
+                <a href={{trend.shareUrl}} target="_blank" rel="noopener">
+                  <div class="ui green tag label">
+                    Go to Trend
+                  </div>
+                </a>
+              </div>
             </div>
-            {{/each}}
-        </div>
-        {{/ember-scrollable}}
-    </div>
+          </div>
+        {{/each}}
+        {{#each model.secondTrending.trendingSearches as |trend|}}
+          <div class="item">
+            <div class="ui tiny image">
+              <img src={{trend.image.imageUrl}} alt="" >
+            </div>
+            <div class="content">
+              <div class="header">
+                {{trend.title.query}}
+              </div>
+              <div class="meta">
+                <span class="cinema">
+                  {{trend.formattedTraffic}}
+                </span>
+              </div>
+              <div class="description">
+                {{article.description}}
+              </div>
+              <div class="extra">
+                <a href={{trend.shareUrl}} target="_blank" rel="noopener">
+                  <div class="ui green tag label">
+                    Go to Article
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    {{/ember-scrollable}}
+  </div>
 </div>

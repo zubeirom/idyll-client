@@ -1,38 +1,54 @@
-<br>
-<br>
+{{! template-lint-disable no-inline-styles  }}
+<br >
+<br >
 <div class="ui basic segment wow fadeIn" data-wow-duration="0.5s">
-    <img src="https://cdn.freebiesupply.com/images/large/2x/reddit-logo-png-transparent.png" width="300px" alt="">
-    <br>
-    powered by News Api <a href="https://github.com/bzarras/newsapi" target="_blank"><i class="fab fa-github fa-lg"></i></a>
-    <br>
-    <br>
-    <br>
+  <img
+    src="https://cdn.freebiesupply.com/images/large/2x/reddit-logo-png-transparent.png"
+    width="300px"
+    alt=""
+  >
+  <br >
+  powered by News Api
+  <a href="https://github.com/bzarras/newsapi" target="_blank" rel="noopener">
+    <i class="fab fa-github fa-lg"></i>
+  </a>
+  <br >
+  {{#if loader}}
+    <div class="ui active centered inline loader"></div>
+  {{else}}
     <div style="height: 800px;">
-        {{#ember-scrollable autoHide=false}}
-          <br>
-          <div class="ui divided items">
-            {{#each model.articles as |article|}}
+      {{#ember-scrollable autoHide=false}}
+        <br >
+        <div class="ui divided items">
+          {{#each model.articles as |article|}}
             <div class="item">
               <div class="image">
-                <img src={{article.urlToImage}} alt="">
+                <img src={{article.urlToImage}} alt="" >
               </div>
               <div class="content">
-                <div class="header">{{article.title}}</div>
+                <div class="header">
+                  {{article.title}}
+                </div>
                 <div class="meta">
-                  <span class="cinema">{{article.source.name}}</span>
+                  <span class="cinema">
+                    {{article.source.name}}
+                  </span>
                 </div>
                 <div class="description">
                   {{article.description}}
                 </div>
                 <div class="extra">
-                  <a href={{article.url}} target="_blank">
-                    <div class="ui orange tag label">Go to Article</div>
+                  <a href={{article.url}} target="_blank" rel="noopener">
+                    <div class="ui orange tag label">
+                      Go to Article
+                    </div>
                   </a>
                 </div>
               </div>
             </div>
-            {{/each}}
-          </div>
-        {{/ember-scrollable}}
+          {{/each}}
+        </div>
+      {{/ember-scrollable}}
     </div>
+  {{/if}}
 </div>

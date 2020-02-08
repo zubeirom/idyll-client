@@ -5,14 +5,19 @@ import NewsAPI from 'newsapi'
 export default Controller.extend({
     viewArticles: true,
     viewSources: false,
+    loader: false,
     actions: {
         viewCountries() {
+            set(this, 'loader', true)
             set(this, 'viewArticles', false);
             set(this, 'viewSources', false);
+            set(this, 'loader', false)
         },
         viewSrcs() {
+            set(this, 'loader', true)
             set(this, 'viewArticles', false);
             set(this, 'viewSources', true);
+            set(this, 'loader', false)
         },
         activateArticles() {
             set(this, 'loader', true)
