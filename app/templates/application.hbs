@@ -57,31 +57,33 @@
 </style>
 
 <script>
+  window.onload = () => {
 
-  let sidebar = document.getElementById('body');
-
-  let mc = new Hammer(sidebar);
-
-  //enable all directions
-  mc.get('swipe').set({
-    direction: Hammer.DIRECTION_ALL,
-    threshold: 1, 
-    velocity:0.1
-  });
-
-  mc.on("swiperight", 
-    function toggleSidebar(ev) {
-      console.log(ev.type)
+    let sidebar = document.getElementById('body');
+  
+    let mc = new Hammer(sidebar);
+  
+    //enable all directions
+    mc.get('swipe').set({
+      direction: Hammer.DIRECTION_ALL,
+      threshold: 1, 
+      velocity:0.1
+    });
+  
+    mc.on("swiperight", 
+      function toggleSidebar(ev) {
+        console.log(ev.type)
+        $('.ui.labeled.icon.sidebar')
+          .sidebar('toggle')
+          ;
+      }
+    )
+  
+    function toggleSidebar() {
       $('.ui.labeled.icon.sidebar')
         .sidebar('toggle')
         ;
     }
-  )
-
-  function toggleSidebar() {
-    $('.ui.labeled.icon.sidebar')
-      .sidebar('toggle')
-      ;
   }
 </script>
 
