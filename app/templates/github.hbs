@@ -1,50 +1,71 @@
-  <div class="ui basic segment wow fadeIn" data-wow-duration="0.5s">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Octicons-logo-github.svg/799px-Octicons-logo-github.svg.png" width="200px" alt="">
-      <h1 class="ui header">Trending this week</h1>
-      <div class="ui input">
-        {{input value=language enter=(action "languageQuery") placeholder="Type in language"}}
-      </div>
-      <br>
-      {{#if loader}}
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="ui active centered inline text loader">Repositories are loading</div>
-      {{else}}
-      <div style="height: 800px;">
-          {{#ember-scrollable autoHide=false}}
-          <br>
-          <div class="ui divided items">
-              {{#each model as |repo|}}
-              <div class="item">
-                  <div class="ui tiny circular image">
-                      <img src={{repo.avatar}} alt="">
-                  </div>
-                  <div class="content">
-                      <div class="header">{{repo.name}}</div>
-                      <div class="meta">
-                          <span class="cinema">language: {{repo.language}}</span>
-                      </div>
-                      <div class="description">
-                          {{repo.description}}
-                      </div>
-                      <div class="extra">
-                          <a href={{repo.url}} target="_blank">
-                              <div class="ui grey tag label">Go to Repo</div>
-                          </a>
-                          <div class="ui basic label">
-                              <i class="fas fa-star fa-md"></i> {{repo.stars}}
-                          </div>
-                          <div class="ui basic label">
-                              <i class="fas fa-hand-point-down fa-md"></i> {{repo.forks}}
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              {{/each}}
-          </div>
-          {{/ember-scrollable}}
-      </div>
-      {{/if}}
+{{! template-lint-disable no-inline-styles  }}
+<div class="ui basic segment wow fadeIn" data-wow-duration="0.5s">
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Octicons-logo-github.svg/799px-Octicons-logo-github.svg.png"
+    width="200px"
+    alt=""
+  >
+  <h1 class="ui header">
+    Trending this week
+  </h1>
+  <div class="ui input">
+    {{input
+      value=language
+      enter=(action "languageQuery")
+      placeholder="Type in language"
+    }}
   </div>
+  <br >
+  {{#if loader}}
+    <br >
+    <br >
+    <br >
+    <br >
+    <div class="ui active centered inline text loader">
+      Repositories are loading
+    </div>
+  {{else}}
+    <div style="height: 800px;">
+      {{#ember-scrollable autoHide=false}}
+        <br >
+        <div class="ui divided items">
+          {{#each model as |repo|}}
+            <div class="item">
+              <div class="ui tiny circular image">
+                <img src={{repo.avatar}} alt="" >
+              </div>
+              <div class="content">
+                <div class="header">
+                  {{repo.name}}
+                </div>
+                <div class="meta">
+                  <span class="cinema">
+                    language: {{repo.language}}
+                  </span>
+                </div>
+                <div class="description">
+                  {{repo.description}}
+                </div>
+                <div class="extra">
+                  <a href={{repo.url}} target="_blank" rel="noopener">
+                    <div class="ui grey tag label">
+                      Go to Repo
+                    </div>
+                  </a>
+                  <div class="ui basic label">
+                    <i class="fas fa-star fa-md"></i>
+                    {{repo.stars}}
+                  </div>
+                  <div class="ui basic label">
+                    <i class="fas fa-hand-point-down fa-md"></i>
+                    {{repo.forks}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      {{/ember-scrollable}}
+    </div>
+  {{/if}}
+</div>

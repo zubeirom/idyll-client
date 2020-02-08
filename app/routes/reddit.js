@@ -34,12 +34,4 @@ export default Route.extend({
       console.log(error);
     }
 	},
-	
-	setupController(controller) {
-		this._super(...arguments);
-		while (!this.model.articles) {
-			console.log("trigger")
-		}
-		set(controller, "loader", false);
-	},
 });

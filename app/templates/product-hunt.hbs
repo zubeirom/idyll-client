@@ -1,42 +1,55 @@
+{{! template-lint-disable no-inline-styles  }}
 <div class="ui basic segment wow fadeIn" data-wow-duration="0.5s">
-  <img src="https://ph-static.imgix.net/ph-logo-1.png?auto=format&auto=compress" width="300px" alt="">
-  <h1 class="ui header">Tech Posts of today</h1>
+  <img
+    src="https://ph-static.imgix.net/ph-logo-1.png?auto=format&auto=compress"
+    width="300px"
+    alt=""
+  >
+  <h1 class="ui header">
+    Tech Posts of today
+  </h1>
   <div style="height: 800px;">
     {{#ember-scrollable autoHide=false}}
-    <br>
-    <div class="ui divided items">
-      {{#each model as |post|}}
-      <div class="item">
-        <div class="ui tiny image">
-          <img src={{post.thumbnail.image_url}} alt="">
-        </div>
-        <div class="content">
-          <div class="header">{{post.name}}</div>
-          <div class="meta">
-            {{#each post.makers as |maker|}}
-              <span class="cinema">
-                {{maker.name}}, 
-              </span>
-            {{/each}}
-          </div>
-          <div class="description">
-            {{post.tagline}}
-          </div>
-          <div class="extra">
-            <a href={{post.redirect_url}} target="_blank">
-              <div class="ui orange tag label">Go to Post</div>
-            </a>
-            <div class="ui basic label">
-              <i class="comments icon"></i> {{post.comments_count}}
+      <br >
+      <div class="ui divided items">
+        {{#each model as |post|}}
+          <div class="item">
+            <div class="ui tiny image">
+              <img src={{post.thumbnail.image_url}} alt="" >
             </div>
-            <div class="ui basic label">
-              <i class="fas fa-vote-yea fa-md"></i> {{post.votes_count}}
+            <div class="content">
+              <div class="header">
+                {{post.name}}
+              </div>
+              <div class="meta">
+                {{#each post.makers as |maker|}}
+                  <span class="cinema">
+                    {{maker.name}},
+                  </span>
+                {{/each}}
+              </div>
+              <div class="description">
+                {{post.tagline}}
+              </div>
+              <div class="extra">
+                <a href={{post.redirect_url}} target="_blank" rel="noopener">
+                  <div class="ui orange tag label">
+                    Go to Post
+                  </div>
+                </a>
+                <div class="ui basic label">
+                  <i class="comments icon"></i>
+                  {{post.comments_count}}
+                </div>
+                <div class="ui basic label">
+                  <i class="fas fa-vote-yea fa-md"></i>
+                  {{post.votes_count}}
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        {{/each}}
       </div>
-      {{/each}}
-    </div>
     {{/ember-scrollable}}
   </div>
 </div>

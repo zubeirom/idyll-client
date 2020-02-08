@@ -1,42 +1,60 @@
-<br>
-<br>
+{{! template-lint-disable no-inline-styles  }}
+<br >
+<br >
 <div class="ui basic segment wow fadeIn" data-wow-duration="0.5s">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/512px-YouTube_Logo_2017.svg.png" width="300px"  alt="">
-    <br>
-		<br>
-    <h1 class="ui header">Most Trending Videos</h1>
-		<br>
-    <div style="height: 800px;">
-      {{#ember-scrollable autoHide=false}}
-				<br>
-				<div class="ui divided items">
-					{{#each model as |video|}}
-					<div class="item">
-						<div class="image">
-							<img src={{video.snippet.thumbnails.standard.url}} alt="">
-						</div>
-						<div class="content">
-							<div class="header">{{video.snippet.title}}</div>
-							<div class="meta">
-								<span class="cinema">{{video.snippet.channelTitle}}</span>
-							</div>
-							<div class="description">
-								<p id="youtube_description">
-									{{video.snippet.description}}
-								</p>
-							</div>
-							<div class="extra">
-								<a href='https://www.youtube.com/watch?v={{video.id}}' target="_blank">
-									<div class="ui red tag label">Go to Video</div>
-								</a>
-								<div class="ui basic label">
-									<i class="eye icon"></i> {{video.statistics.viewCount}}
-								</div>
-							</div>
-						</div>
-					</div>
-					{{/each}}
-				</div>
-      {{/ember-scrollable}}
-    </div>
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/512px-YouTube_Logo_2017.svg.png"
+    width="300px"
+    alt=""
+  >
+  <br >
+  <br >
+  <h1 class="ui header">
+    Most Trending Videos
+  </h1>
+  <br >
+  <div style="height: 800px;">
+    {{#ember-scrollable autoHide=false}}
+      <br >
+      <div class="ui divided items">
+        {{#each model as |video|}}
+          <div class="item">
+            <div class="image">
+              <img src={{video.snippet.thumbnails.standard.url}} alt="" >
+            </div>
+            <div class="content">
+              <div class="header">
+                {{video.snippet.title}}
+              </div>
+              <div class="meta">
+                <span class="cinema">
+                  {{video.snippet.channelTitle}}
+                </span>
+              </div>
+              <div class="description">
+                <p id="youtube_description">
+                  {{video.snippet.description}}
+                </p>
+              </div>
+              <div class="extra">
+                <a
+                  href="https://www.youtube.com/watch?v={{video.id}}"
+                  target="_blank"
+									rel="noopener"
+                >
+                  <div class="ui red tag label">
+                    Go to Video
+                  </div>
+                </a>
+                <div class="ui basic label">
+                  <i class="eye icon"></i>
+                  {{video.statistics.viewCount}}
+                </div>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    {{/ember-scrollable}}
+  </div>
 </div>
