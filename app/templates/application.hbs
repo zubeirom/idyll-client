@@ -57,7 +57,13 @@
 </style>
 
 <script>
+  function toggleSidebar() {
+    $('.ui.labeled.icon.sidebar')
+      .sidebar('toggle')
+      ;
+  }
   window.onload = () => {
+
 
     let sidebar = document.getElementById('body');
   
@@ -79,11 +85,6 @@
       }
     )
   
-    function toggleSidebar() {
-      $('.ui.labeled.icon.sidebar')
-        .sidebar('toggle')
-        ;
-    }
   }
 </script>
 
