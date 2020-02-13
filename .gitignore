@@ -28,3 +28,4 @@
 !/semantic/src/site/*
 !/semantic/src/theme.config
 /.firebase
+.idea
