@@ -1,6 +1,5 @@
 import Route from "@ember/routing/route";
 import { inject as service } from "@ember/service";
-import NewsAPI from "newsapi";
 import { set } from "@ember/object";
 
 export default Route.extend({
@@ -11,24 +10,19 @@ export default Route.extend({
   },
 
   async afterModel(model) {
-    const newsapi = new NewsAPI("a6621af2728b4b689ba4f4c17255b292");
     try {
-      newsapi.v2
-        .topHeadlines({
-          language: "en"
-        })
-        .then(response => {
-          const { articles } = response;
-          set(model, "articles", articles);
-          set(model, "categories", [
-            "business",
-            "entertainment",
-            "health",
-            "science",
-            "sports",
-            "technology"
-          ]);
-        });
+      const key = "a6621af2728b4b689ba4f4c17255b292";
+      const url = `https://newsapi.org/v2/top-headlines?language=en&apiKey=${key}`
+      const res = await this.get('ajax').request(url);
+      set(model, "articles", res.articles);
+      set(model, "categories", [
+        "business",
+        "general",
+        "health",
+        "science",
+        "sports",
+        "technology"
+      ])
     } catch (error) {
       console.log(error);
     }

@@ -49,6 +49,15 @@
       <br >
       <br >
       <div class="field">
+        <div class="ui icon input">
+          {{input value=searchValue keyUp=(action "queryArticles" searchValue) placeholder="Search for article..."}}
+          <i class="search icon"></i>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="field">
         {{#ui-dropdown
           class="selection"
           selected="Bob"
