@@ -39,6 +39,7 @@
     "ember-concurrency": "^1.1.5",
     "ember-data": "^3.18.0",
     "ember-export-application-global": "^2.0.0",
+    "ember-fetch": "^8.0.1",
     "ember-load": "0.0.17",
     "ember-load-initializers": "^1.1.0",
     "ember-maybe-import-regenerator": "^0.1.6",
@@ -64,6 +65,7 @@
     "node": "6.* || 8.* || >= 10.*"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "ember-noscript": "^3.0.0",
     "gulp": "^4.0.2",
     "newsapi": "^2.4.0"
