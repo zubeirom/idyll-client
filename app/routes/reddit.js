@@ -12,7 +12,7 @@ export default Route.extend({
 
   async afterModel(model) {
     const key = "a6621af2728b4b689ba4f4c17255b292";
-    const url = `http://newsapi.org/v2/everything?sources=reddit-r-all&apiKey=${key}`
+    const url = `https://newsapi.org/v2/everything?sources=reddit-r-all&apiKey=${key}`
     fetch(url, {
       mode: 'no-cors'
     }).then(async response => {
