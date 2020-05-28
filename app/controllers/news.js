@@ -26,7 +26,7 @@ export default Controller.extend({
         async queryArticles(searchValue) {
             try {
                 let url;
-                searchValue ? url = `${ENV.host}news?searchValue=${searchValue}` : url = `${ENV.host}news`
+                searchValue ? url = `${ENV.host}query-news?searchValue=${searchValue}` : url = `${ENV.host}news`
                 set(this, 'loader', true);
                 const res = await this.get('ajax').request(url);
                 const { articles } = res;
