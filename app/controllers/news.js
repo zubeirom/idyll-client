@@ -1,13 +1,13 @@
 import Controller from '@ember/controller';
-import { set } from '@ember/object';
-import { inject as service } from '@ember/service';
+import {set } from '@ember/object';
+import { inject as service } from '@ember/service'
+import ENV from "../config/environment";
 
 export default Controller.extend({
     viewArticles: true,
     viewSources: false,
     loader: false,
     ajax: service(),
-    key: "a6621af2728b4b689ba4f4c17255b292",
 
     actions: {
         viewCountries() {
@@ -26,7 +26,7 @@ export default Controller.extend({
         async queryArticles(searchValue) {
             try {
                 let url;
-                searchValue ? url = `https://newsapi.org/v2/everything?q=${searchValue}&sortBy=publishedAt&apiKey=${this.key}` : url = `https://newsapi.org/v2/top-headlines?language=en&apiKey=${this.key}`
+                searchValue ? url = `${ENV.host}news?searchValue=${searchValue}` : url = `${ENV.host}news`
                 set(this, 'loader', true);
                 const res = await this.get('ajax').request(url);
                 const { articles } = res;
@@ -40,7 +40,7 @@ export default Controller.extend({
         async activateArticles() {
             set(this, 'loader', true)
             try {
-                const url = `https://newsapi.org/v2/top-headlines?language=en&apiKey=${this.key}`
+                const url = `${ENV.host}news`
                 const res = await this.get('ajax').request(url);
                 const { articles } = res;
                 set(this.model, 'articles', articles);
@@ -56,7 +56,7 @@ export default Controller.extend({
         async listArticles(sources) {
             set(this, 'loader', true)
             try {
-                const url = `https://newsapi.org/v2/top-headlines?sources=${sources}&apiKey=${this.key}`
+                const url = `${ENV.host}news?sources=${sources}`
                 const res = await this.get('ajax').request(url);
                 const { articles } = res;
                 set(this, 'viewArticles', true);
@@ -71,7 +71,7 @@ export default Controller.extend({
         async listCountryArticles(country) {
             set(this, 'loader', true)
             try {
-                const url = `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${this.key}`
+                const url = `${ENV.host}news?country=${country}`
                 const res = await this.get('ajax').request(url);
                 const { articles } = res;
                 set(this.model, 'articles', articles);
@@ -86,7 +86,7 @@ export default Controller.extend({
         async listCatArt(category) {
             set(this, 'loader', true)
             try {
-                const url = `https://newsapi.org/v2/top-headlines?category=${category}&apiKey=${this.key}`
+                const url = `${ENV.host}news?category=${category}`
                 const res = await this.get('ajax').request(url);
                 const { articles } = res;
                 set(this.model, 'articles', articles);

@@ -23,7 +23,7 @@ export default Route.extend({
                     delete model.loader
                     return model
                 }, async error => {
-                        const res = await get(this, 'ajax').request(`https://idyll-api.herokuapp.com/google?country=US`);
+                    const res = await get(this, 'ajax').request(`https://idyll-api.herokuapp.com/google?country=US`);
                     console.log(error);
                     set(model, 'firstTrending', res.default.trendingSearchesDays[0]);
                     set(model, 'secondTrending', res.default.trendingSearchesDays[1]);
@@ -37,7 +37,7 @@ export default Route.extend({
             delete model.loader
             return model
         } catch (error) {
-            console.log(error)
+            throw error;
         }
     }
 });
