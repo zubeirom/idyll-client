@@ -49,6 +49,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV.host = "https://api-idyll.now.sh/"
     // here you can enable a production-specific feature
   }
 
