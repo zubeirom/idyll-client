@@ -16,6 +16,7 @@ Router.map(function() {
   this.route('twitter');
   this.route('github');
   this.route('google');
+  this.route('app-privacy-policy');
 });
 
 export default Router;
